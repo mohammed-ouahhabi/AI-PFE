@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+
+# Models/data artifacts
+models/*.pkl
+!models/.gitkeep
+
+# Node
+frontend/node_modules/
+frontend/dist/
+
+# Env
+.env
+*.env.local
+
+# Jupyter
+.ipynb_checkpoints/

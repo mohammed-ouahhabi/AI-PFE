@@ -1,0 +1,32 @@
+version: '3.9'
+
+services:
+  db:
+    image: postgres:16-alpine
+    container_name: real_estate_ai_db
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: real_estate_ai
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  backend:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    container_name: real_estate_ai_backend
+    restart: unless-stopped
+    depends_on:
+      - db
+    environment:
+      DATABASE_URL: postgresql+psycopg2://postgres:postgres@db:5432/real_estate_ai
+    ports:
+      - "5000:5000"
+    command: ["python", "backend/app.py"]
+
+volumes:
+  postgres_data:
