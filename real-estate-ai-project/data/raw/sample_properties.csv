@@ -1,0 +1,11 @@
+surface,rooms,bedrooms,city,construction_year,has_garage,has_garden,has_balcony,price
+45,2,1,Lyon,1998,0,0,1,185000
+60,3,2,Lyon,2005,0,0,1,235000
+72,3,2,Toulouse,2010,1,0,1,248000
+90,4,3,Nantes,2002,1,1,0,315000
+110,5,4,Bordeaux,2015,1,1,1,420000
+130,6,4,Paris,1995,1,0,1,790000
+80,4,3,Marseille,2008,0,1,1,280000
+55,2,1,Lille,1985,0,0,0,165000
+95,5,3,Rennes,2020,1,1,1,365000
+140,6,5,Paris,2018,1,1,1,980000
